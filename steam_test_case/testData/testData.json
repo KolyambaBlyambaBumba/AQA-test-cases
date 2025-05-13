@@ -1,0 +1,8 @@
+{
+    "steamTests": {
+        "url": "https://store.steampowered.com/",
+        "gameName": "Dota",
+        "valveAboutPageUrl": "https://www.valvesoftware.com/en/about",
+        "downlowdFileName": "SteamSetup.exe"
+    }
+}
