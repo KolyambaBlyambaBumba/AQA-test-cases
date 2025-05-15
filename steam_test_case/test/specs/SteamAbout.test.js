@@ -7,6 +7,8 @@ import Browser from '../../framework/browser/Browser.js';
 describe('Steam About Page Test', () => {
     it('should link to about page, check install button and compare online and playing and back to main page', async () => {
         await Browser.openUrl(testData.steamTests.url);
+        
+        assert.isTrue(await SteamPage.isPageOpened(), 'Steam page is not opened');        
 
         await SteamPage.clickAboutLink();
 

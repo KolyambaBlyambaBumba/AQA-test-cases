@@ -8,7 +8,7 @@ import Browser from '../../framework/browser/Browser.js';
 describe('Steam Search Test', () => {
     it('should search for a game', async () => {
         await Browser.openUrl(testData.steamTests.url);
-
+        
         assert.isTrue(await SteamPage.isPageOpened(), 'Steam page is not opened');
 
         await SteamPage.searchGameAndEnter(testData.steamTests.gameName);
