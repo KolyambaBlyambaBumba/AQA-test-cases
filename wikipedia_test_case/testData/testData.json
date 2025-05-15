@@ -1,0 +1,13 @@
+{
+    "startUrl": "https://www.wikipedia.org/",
+    "downloadTest": {
+        "inputValue": "Albert Einstein"
+    },
+    "informationTest": {
+        "inputValue": "Bengal tiger"
+    },
+    "languageTest": {
+        "inputValue": "Gabriel García Márquez",
+        "language": "es"
+    }
+}
