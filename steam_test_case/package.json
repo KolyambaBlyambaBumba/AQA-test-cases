@@ -1,0 +1,24 @@
+{
+  "name": "unit_3_final_task",
+  "type": "module",
+  "scripts": {
+    "chrome.mocha": "wdio run ./configs/chrome.mocha.conf.js",
+    "test:steam": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/Steam.test.js",
+    "test:about": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/SteamAbout.test.js",
+    "test:download": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/SteamDownload.test.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@babel/register": "^7.23.7",
+    "@wdio/allure-reporter": "^8.34.0",
+    "@wdio/cli": "^8.35.1",
+    "@wdio/local-runner": "^8.35.1",
+    "@wdio/mocha-framework": "^8.35.0",
+    "@wdio/spec-reporter": "^8.32.4",
+    "chai": "^5.1.0",
+    "dotenv": "^16.4.7",
+    "fs-extra": "^11.2.0",
+    "winston": "^3.13.0"
+  }
+}
