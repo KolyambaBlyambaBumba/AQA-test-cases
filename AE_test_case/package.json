@@ -2,7 +2,8 @@
   "name": "ae-test-task",
   "type": "module",
   "scripts": {
-    "chrome.mocha": "wdio run ./configs/chrome.mocha.conf.js"
+    "chrome.mocha": "wdio run ./configs/chrome.mocha.conf.js",
+    "test:order": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/PlaceOrder.test.js"
   },
   "dependencies": {
     "@babel/core": "^7.24.3",

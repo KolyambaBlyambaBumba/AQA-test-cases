@@ -14,7 +14,13 @@ export const mainConfig = {
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     framework: 'mocha',
-    reporters: ['spec'],
+    reporters: ['spec',
+        ['allure', {
+            outputDir: 'allure-results',
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: false,
+        }],
+    ],
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
@@ -22,6 +28,10 @@ export const mainConfig = {
 
     onPrepare: function() {
         fs.ensureDir(downloadDir);
+    },
+
+    before: async function () {
+        browser.maximizeWindow();
     },
 
     after: function (result, capabilities, specs) {
