@@ -1,12 +1,12 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
 
 import { assert } from 'chai';
-
 import testData from '../../testData/testData.json' assert { type: "json" };
 import Browser from '../../framework/browser/Browser.js';
+import AllureReporter from '@wdio/allure-reporter';
+
 import WikiMainPage from '../page-objects/main.page.js';
 import SearchedPersonPage from '../page-objects/searched.page.js';
-import AllureReporter from '@wdio/allure-reporter';
 
 Given('I am on Wikipedia.org homepage', async function () {
     AllureReporter.addStep(`Open URL: ${testData.startUrl}`);

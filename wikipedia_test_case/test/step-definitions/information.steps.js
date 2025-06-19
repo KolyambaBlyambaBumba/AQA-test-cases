@@ -1,10 +1,10 @@
 import { Then, When } from '@wdio/cucumber-framework';
 
 import { assert } from 'chai';
+import AllureReporter from '@wdio/allure-reporter';
 
 import SearchedPersonPage from '../page-objects/searched.page.js';
 import InformationPage from '../page-objects/information.page.js';
-import AllureReporter from '@wdio/allure-reporter';
 
 When('I click the page information link', async function () {
     AllureReporter.addStep('Click the page information button');

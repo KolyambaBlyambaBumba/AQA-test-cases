@@ -2,11 +2,11 @@ import { Then, When } from '@wdio/cucumber-framework';
 
 import { assert } from 'chai';
 import { downloadDir } from '../../framework/configs/main.wdio.conf.js';
+import Browser from '../../framework/browser/Browser.js';
+import AllureReporter from '@wdio/allure-reporter';
 
 import SearchedPersonPage from '../page-objects/searched.page.js';
 import DownloadPage from '../page-objects/download.page.js';
-import Browser from '../../framework/browser/Browser.js';
-import AllureReporter from '@wdio/allure-reporter';
 
 When('I click the download as PDF link', async function () {
     AllureReporter.addStep('Click the download as PDF button');
