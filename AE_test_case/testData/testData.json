@@ -1,0 +1,34 @@
+{
+    "baseURL": "https://automationexercise.com",
+    "products": {
+        "tShirtItem": "T-shirt",
+        "quantity": 1
+    },
+    "userData": {
+        "firstName": "Userian26",
+        "lastName": "Testovich",
+        "title": "Mr",
+        "email": "UT26@example.com",
+        "password": "password123",
+        "address": "123 Test St",
+        "country": "Canada",
+        "state": "Ontario",
+        "city": "Test City",
+        "zipcode": "12345",
+        "mobileNumber": "+1234567890"
+    },
+    "orderDescription": "This is a test description for the product.",
+    "paymentDetails": {
+        "cardNumber": "01234567890123456",
+        "cvc": "123",
+        "expirationMonth": "12",
+        "expirationYear": "2025"
+    },
+    "accountMessages": {
+        "accountCreated": "ACCOUNT CREATED!",
+        "accountDeleted": "ACCOUNT DELETED!"
+    },
+    "successMessages": {
+        "orderPlaced": "Congratulations! Your order has been confirmed!"
+    }
+}
