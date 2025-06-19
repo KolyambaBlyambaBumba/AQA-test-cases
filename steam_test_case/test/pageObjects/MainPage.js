@@ -1,5 +1,5 @@
-import BasePage from '../../framework/page/BasePage.js'
 import { Button, Label } from '../../framework/elements/index.js'
+import BasePage from '../../framework/page/BasePage.js'
 
 class MainPage extends BasePage {
     constructor() {

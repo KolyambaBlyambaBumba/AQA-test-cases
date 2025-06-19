@@ -1,9 +1,10 @@
 import { assert } from 'chai';
 import testData from '../../testData/testData.json' assert { type: "json" };
+import Browser from '../../framework/browser/Browser.js';
+
 import SteamPage from '../pageObjects/SteamPage.js';
 import SteamSearchPage from '../pageObjects/SteamSearchPage.js';
 import GamePage from '../pageObjects/GamePage.js';
-import Browser from '../../framework/browser/Browser.js';
 
 describe('Steam Search Test', () => {
     it('should search for a game', async () => {

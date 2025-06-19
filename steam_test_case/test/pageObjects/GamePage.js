@@ -10,11 +10,11 @@ class GamePage extends BasePage {
     }
 
     async getBreadcrumbsText() {
-        return await this.breadcrumbs.getText();
+        return this.breadcrumbs.getText();
     }
 
     async isPlayButtonEnabled() {
-        return await this.playButton.state().isEnabled();
+        return this.playButton.state().isEnabled();
     }
 }
 

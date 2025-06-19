@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "chrome.mocha": "wdio run ./configs/chrome.mocha.conf.js",
-    "test:steam": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/Steam.test.js",
+    "test:search": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/SteamSearch.test.js",
     "test:about": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/SteamAbout.test.js",
     "test:download": "wdio run ./configs/chrome.mocha.conf.js --spec ./test/specs/SteamDownload.test.js"
   },

@@ -1,8 +1,9 @@
 import { assert } from 'chai';
-import SteamPage from '../pageObjects/SteamPage.js';
-import SteamAboutPage from '../pageObjects/SteamAboutPage.js';
 import testData from '../../testData/testData.json' assert { type: "json" };
 import Browser from '../../framework/browser/Browser.js';
+
+import SteamPage from '../pageObjects/SteamPage.js';
+import SteamAboutPage from '../pageObjects/SteamAboutPage.js';
 
 describe('Steam About Page Test', () => {
     it('should link to about page, check install button and compare online and playing and back to main page', async () => {

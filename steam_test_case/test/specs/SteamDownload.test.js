@@ -1,10 +1,11 @@
 import { assert } from 'chai';
 import { downloadDir } from '../../framework/configs/main.wdio.conf.js';
 import testData from '../../testData/testData.json' assert { type: "json" };
+import Browser from '../../framework/browser/Browser.js';
+
 import SteamPage from '../pageObjects/SteamPage.js';
 import ValveAboutPage from '../pageObjects/ValveAboutPage.js';
 import SteamAboutPage from '../pageObjects/SteamAboutPage.js';
-import Browser from '../../framework/browser/Browser.js';
 
 describe('Steam Download Test', () => {
     it('should link to about tab and check it, return back and link to download page and download setup file', async () => {
