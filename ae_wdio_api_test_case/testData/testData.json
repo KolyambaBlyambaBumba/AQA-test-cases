@@ -1,0 +1,10 @@
+{
+    "urls": {
+        "baseUrl": "https://automationexercise.com",
+        "apiUsersUrl": "https://automationexercise.com/api/verifyLogin"
+    },
+    "accountMessages": {
+        "accountCreated": "ACCOUNT CREATED!",
+        "accountDeleted": "ACCOUNT DELETED!"
+    }
+}
