@@ -8,7 +8,7 @@ import Products from '../page-objects/products.page.js';
 Given('User open the Login page', async () => {
     AllureReporter.addArgument('Base URL', browser.options.baseUrl);
     await Login.open();
-    await Login.isPageOpened();
+    await expect(Login.uniqueElement).toBeDisplayed();
 });
 
 When('User enter username {string} and password {string}', async (username, password) => {
@@ -20,7 +20,7 @@ When('User click the login button', async () => {
 });
 
 Then('User should be redirected to the Products page', async () => {
-    await expect(await Products.isPageOpened()).toBe(true);
+    await expect(Products.uniqueElement).toBeDisplayed();
 });
 
 Then('User should see an error message {string}', async (expectedMessage) => {

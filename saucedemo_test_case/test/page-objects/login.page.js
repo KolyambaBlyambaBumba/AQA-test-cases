@@ -2,31 +2,27 @@ import Page from './page.js';
 
 class Login extends Page {
     get uniqueElement() {
-        return $('//*[@class="login_logo"]');
+        return $('.login_logo');
     }
 
     get usernameInput() {
-        return $('//*[@data-test="username"]');
+        return $('[data-test="username"]');
     }
 
     get passwordInput() {
-        return $('//*[@data-test="password"]');
+        return $('[data-test="password"]');
     }
 
     get loginButton() {
-        return $('//*[@data-test="login-button"]');
+        return $('[data-test="login-button"]');
     }
 
     get errorMessage() {
-        return $('//*[@data-test="error"]');
+        return $('[data-test="error"]');
     }
 
     open() {
         return super.open('/');
-    }
-
-    async isPageOpened() {
-        return super.isPageOpened(this.uniqueElement);
     }
 
     async setCredentials(username, password) {
