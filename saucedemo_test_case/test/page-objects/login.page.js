@@ -1,25 +1,15 @@
 import Page from './page.js';
 
 class Login extends Page {
-    get uniqueElement() {
-        return $('.login_logo');
-    }
+    get uniqueElement() { return $('.login_logo'); }
 
-    get usernameInput() {
-        return $('[data-test="username"]');
-    }
+    get usernameInput() { return $('[data-test="username"]'); }
 
-    get passwordInput() {
-        return $('[data-test="password"]');
-    }
+    get passwordInput() { return $('[data-test="password"]'); }
 
-    get loginButton() {
-        return $('[data-test="login-button"]');
-    }
-
-    get errorMessage() {
-        return $('[data-test="error"]');
-    }
+    get loginButton() { return $('[data-test="login-button"]'); }
+    
+    get errorMessage() { return $('[data-test="error"]'); }
 
     open() {
         return super.open('/');
