@@ -1,7 +1,7 @@
-import { When, Then } from "@wdio/cucumber-framewor";
+import { When, Then } from '@wdio/cucumber-framework';
 
-import Login from "../page-objects/login.page.js";
-import Products from "../page-objects/products.page.js";
+import Login from '../page-objects/login.page.js';
+import Products from '../page-objects/products.page.js';
 
 When('User click the menu button', async () => {
     await Products.clickMenuButton();
