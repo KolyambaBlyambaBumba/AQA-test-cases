@@ -30,16 +30,17 @@ class Products extends Page {
     async addProductToCartByProductNumber(index) {
         const items = await this.productItems;
 
-        if (index >= items.length) {
+        if (index > items.length || index < 1) {
             throw new Error(`Index ${index} out of bounds. Total items: ${items.length}`);
         }
 
         const item = items[index - 1];
 
         const name = await item.$('[data-test="inventory-item-name"]').getText();
+        const price = await item.$('[data-test="inventory-item-price"]').getText();
         await item.$('button[data-test^="add-to-cart-"]').click();
 
-        return name;
+        return { name, price };
     }
 
     async getCartBadgeCount() {
