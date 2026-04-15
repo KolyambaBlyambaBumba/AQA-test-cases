@@ -1,11 +1,12 @@
 Feature: Checkout
 
-  Scenario: User can complete the checkout process
+  Background: User is logged in and on the Products page
     Given User open the Login page
     When User enter username "standard_user" and password "secret_sauce"
     And User click the login button
     Then User should be redirected to the Products page
-    
+
+  Scenario: User can complete the checkout process
     When User sort products by "Name (Z to A)"
     And User add product number 1 from the product list to the cart
     Then User should see "1" in the cart badge
@@ -37,3 +38,4 @@ Feature: Checkout
     
     When User click the back home button
     Then User should be redirected to the Products page
+    

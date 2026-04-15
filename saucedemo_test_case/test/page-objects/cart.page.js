@@ -7,6 +7,10 @@ class Cart extends Page {
 
     get checkoutButton() { return $('[data-test="checkout"]'); }
 
+    async getUniqueElementText() {
+        return this.uniqueElement.getText();
+    }
+
     async getCartItemAmount() {
         return this.cartItems.length;
     }

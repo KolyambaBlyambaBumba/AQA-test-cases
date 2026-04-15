@@ -33,7 +33,8 @@ When('User click the cart icon', async () => {
 });
 
 Then('User should be redirected to the Cart: {string} page', async (expectedTitle) => {
-    await expect(Cart.uniqueElement).toHaveText(expectedTitle);
+    const actualTitle = await Cart.getUniqueElementText();
+    expect(actualTitle).toBe(expectedTitle);
 });
 
 Then('User should see {int} products in the cart', async (expectedCount) => {
@@ -50,11 +51,21 @@ Then('User should see selected products in the cart', async function () {
 });
 
 When('User click the checkout button', async () => {
-    await Cart.checkoutButton.click();
+    await Cart.clickCheckoutButton();
 });
 
 Then('User should be redirected to the {string} page', async (expectedTitle) => {
-    await expect(Cart.uniqueElement).toHaveText(expectedTitle);
+    const pages = [Information, Overview, Complete];
+
+    for (const page of pages) {
+        const actualTitle = await page.getUniqueElementText();
+        if (actualTitle === expectedTitle) {
+            expect(actualTitle).toBe(expectedTitle);
+            return;
+        }
+    }
+
+    throw new Error(`Page with title "${expectedTitle}" not found among the expected pages.`);
 });
 
 When('User enter first name {string}, last name {string} and postal code {string}', async (firstName, lastName, postalCode) => {

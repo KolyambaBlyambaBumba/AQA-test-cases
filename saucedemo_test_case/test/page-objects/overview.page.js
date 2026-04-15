@@ -1,6 +1,8 @@
 import Page from './page.js';
 
-class Information extends Page {
+class Overview extends Page {
+    get uniqueElement() { return $('[data-test="title"]'); }
+
     get cartItems() { return $$('[data-test="inventory-item"]'); }
 
     get paymentInfo() { return $('[data-test="payment-info-value"]'); }
@@ -14,6 +16,10 @@ class Information extends Page {
     get total() { return $('[data-test="total-label"]'); }
 
     get finishButton() { return $('[data-test="finish"]'); }
+
+    async getUniqueElementText() {
+        return this.uniqueElement.getText();
+    }
 
     async getCartItemAmount() {
         return this.cartItems.length;
@@ -47,4 +53,4 @@ class Information extends Page {
     }
 }
 
-export default new Information();
+export default new Overview();

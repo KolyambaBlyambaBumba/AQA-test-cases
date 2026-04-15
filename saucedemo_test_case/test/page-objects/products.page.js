@@ -24,7 +24,13 @@ class Products extends Page {
     }
 
     async selectProductSortOption(optionText) {
-        await this.productSortDropdown.find(async (elem) => (await elem.getText()) === optionText).click();
+        const option = await this.productSortDropdown.find(async (elem) => (await elem.getText()) === optionText);
+
+        if (!option) {
+            throw new Error(`Option with text "${optionText}" not found in product sort dropdown.`);
+        }
+
+        await option.click();
     }
 
     async addProductToCartByProductNumber(index) {
@@ -38,6 +44,7 @@ class Products extends Page {
 
         const name = await item.$('[data-test="inventory-item-name"]').getText();
         const price = await item.$('[data-test="inventory-item-price"]').getText();
+
         await item.$('button[data-test^="add-to-cart-"]').click();
 
         return { name, price };

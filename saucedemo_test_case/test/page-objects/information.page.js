@@ -11,6 +11,10 @@ class Information extends Page {
 
     get continueButton() { return $('[data-test="continue"]'); }
 
+    async getUniqueElementText() {
+        return this.uniqueElement.getText();
+    }
+
     async setCheckoutInformation(firstName, lastName, postalCode) {
         await this.firstNameInput.setValue(firstName);
         await this.lastNameInput.setValue(lastName);

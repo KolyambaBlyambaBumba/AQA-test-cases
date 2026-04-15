@@ -10,9 +10,15 @@
     "@wdio/spec-reporter": "^9.26.1"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js",
+    "test": "wdio run ./wdio.conf.js",
+
     "test:login": "wdio run ./wdio.conf.js --spec test/features/login.feature",
     "test:checkout": "wdio run ./wdio.conf.js --spec test/features/checkout.feature",
-    "test:logout": "wdio run ./wdio.conf.js --spec test/features/logout.feature"
+    "test:logout": "wdio run ./wdio.conf.js --spec test/features/logout.feature",
+
+    "allure:generate": "allure generate ./allure-results --clean",
+    "allure:open": "allure open",
+
+    "test:report": "npm run test && npm run allure:generate && npm run allure:open"
   }
 }
